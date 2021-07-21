@@ -6,7 +6,6 @@ document.querySelector('.busca').addEventListener('submit', async (event)=>{
     if(input !== '') {
         clearInfo('');
         showWarning('Carregando...')
-    
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid=b68e63d2b0ef89dd48152d5d37106f00&units=metric&lang=pt_br`;
 
         let results = await fetch(url);
